@@ -15,10 +15,12 @@ ROOT_DIR=${1:-"."}
 # Default output filename will be SCORM_main.zip
 OUTPUT_FILENAME=${2:-"main"}
 
-# Default unique identifier
+# Default random unique identifier; replace this with an ID of your choice if you prefer
+SCORM_ID=$(shuf -er -n40  {A..Z} {a..z} {0..9} | tr -d '\n')
 
 TEMPLATE_LINE="                <file href=\"FILE_PATH\"/>"
-ALL_LINES=$(cat scorm_manifest_template.xml)
+HEADER=$(cat scorm_manifest_template.xml)
+ALL_LINES="${HEADER/REPLACE_SCORM_ID/$SCORM_ID}"
 
 # Loop over the output of find, which lists all the files in root directory and subdirectories
 while IFS= read -r filename; do
