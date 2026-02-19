@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns="http://www.imsglobal.org/xsd/imscp_v1p1"
+    xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3"
+    xmlns:lom="http://ltsc.ieee.org/xsd/LOM" identifier="com.github.io.uoe-school-of-mathematics.bookml.SCORM">
+    <metadata>
+        <schema>ADL SCORM</schema>
+        <schemaversion>2004 3rd Edition</schemaversion>
+        <lom:lom>
+            <lom:general/>
+            <lom:lifeCycle/>
+        </lom:lom>
+    </metadata>
+    <organizations>
+        <organization identifier="org1">
+            <item identifier="item1" identifierref="resource1"/>
+        </organization>
+    </organizations>
+    <resources>
+        <resource identifier="resource1" type="webcontent" adlcp:scormType="asset" href="index.html">
